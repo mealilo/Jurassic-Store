@@ -1,13 +1,20 @@
 {
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:64480",
+      "sslPort": 0
+    }
+  },
   "profiles": {
     "Jurassic_Store": {
       "commandName": "Project",
       "launchBrowser": true,
+      "applicationUrl": "http://localhost:5295",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5295"
+      }
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -20,15 +27,7 @@
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true
-    }
-  },
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:64480",
-      "sslPort": 0
+      "environmentVariables": {}
     }
   }
 }

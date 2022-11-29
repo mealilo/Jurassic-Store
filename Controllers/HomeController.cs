@@ -7,14 +7,17 @@ namespace Jurassic_Store.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly DinoDbContext _dbContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, DinoDbContext d)
         {
             _logger = logger;
+            _dbContext = d;
         }
 
         public IActionResult Index()
         {
+            ViewBag.dinos = _dbContext.dinosaurs.ToList();
             return View();
         }
 

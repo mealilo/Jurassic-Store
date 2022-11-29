@@ -1,8 +1,41 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    <h1 class="h1_custom">Jurassic World Factory</h1>
+    <p>Purchase iconic dinosaurs at doorbuster prices.</p>
+ 
 </div>
+
+<section class="wrapper">
+    <div class="container-fostrap">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    @foreach (var dino in ViewBag.dinos)
+                    {
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                    <a class="img-card" href="https://en.wikipedia.org/wiki/Michael_Scott_(The_Office)">
+                                        <img style="height: 100px;" src="@dino.url" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">@dino.commonName</h4>
+                                    <p>Scientific Name: @dino.scientificName</p>
+                                    <p>Weight: @dino.weight</p>
+                                    <p>Height: @dino.height</p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-main btn-block" target="_blank">Buy Dino</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
