@@ -4,8 +4,8 @@
 
 <div class="text-center">
     
-    <h1 class="h1_custom">Jurassic World Factory</h1>
-    <p>Purchase iconic dinosaurs at doorbuster prices.</p>
+    <h1 class="h1_custom"><img src="~/img/logo.jpg" height="250" /></h1>
+    <p class="label" style="padding-top:-10px">Purchase iconic dinosaurs at doorbuster prices.</p>
  
 </div>
 
@@ -18,14 +18,14 @@
                     {
                         <div class="col-xs-12 col-sm-4">
                             <div class="card">
-                                    <a class="img-card" href="https://en.wikipedia.org/wiki/Michael_Scott_(The_Office)">
-                                        <img style="height: 100px;" src="@dino.url" />
+                                    <a class="img-card" href="@dino.url">
+                                        <img style="width:300px" src="@dino.url" />
                                 </a>
                                 <div class="card-content">
                                     <h4 class="card-title">@dino.commonName</h4>
-                                    <p>Scientific Name: @dino.scientificName</p>
-                                    <p>Weight: @dino.weight</p>
-                                    <p>Height: @dino.height</p>
+                                    <p><span class="b">Scientific Name:</span> @dino.scientificName</p>
+                                    <p><span class="b">Weight:</span> @dino.weight</p>
+                                    <p><span class="b">Height:</span> @dino.height</p>
                                 </div>
                                 <div class="card-read-more">
                                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-main btn-block" target="_blank">Buy Dino</a>
