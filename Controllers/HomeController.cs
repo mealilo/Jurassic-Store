@@ -17,7 +17,9 @@ namespace Jurassic_Store.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.dinos = _dbContext.dinosaurs.ToList();
+            List<Dino> dinos = _dbContext.dinosaurs.ToList();
+            dinos.Reverse();
+            ViewBag.dinos = dinos;
             return View();
         }
 
